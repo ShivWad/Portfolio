@@ -34,11 +34,6 @@ function writeName() {
   }
 
 
-function yo(){
-
-    console.log('yoyoy');
-}
-
 writeGreeting();
 
 setTimeout(writeIntroduction, 850);

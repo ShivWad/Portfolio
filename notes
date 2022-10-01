@@ -1,0 +1,17 @@
+    <div class="timeline-content-box">
+      <p class="time">September 2021 - December 2021</p>
+
+      <p class="title">
+        Internship
+      </p>
+      <img src="./assets/digitize-logo.jpg" alt="jims-logo" />
+
+    </div>
+    <div class="timeline-content-box">
+      <p class="time">December 2021 - Present</p>
+      <p class="title">
+        Work
+      </p>
+      <img src="./assets/digitize-logo.jpg" alt="jims-logo" />
+    </div>
+  </div>
