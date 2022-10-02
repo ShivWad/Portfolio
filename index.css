@@ -46,8 +46,8 @@ body {
 
 .timeline-division {
     display: flex;
-    gap: 5%;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .timeline-content-box {
@@ -60,8 +60,12 @@ body {
     align-items: center;
 }
 
+.timeline-title {
+    text-align: center;
+}
+
 .timeline-content-box:hover {
-    box-shadow: 0px 5px 45px #000000;
+    box-shadow: 0px 0px 20px 0px #474242;
     transition: box-shadow .5s;
 }
 
@@ -70,39 +74,24 @@ body {
     border-radius: 50%;
     width: 100px;
 }
+.position-text{
+    color: black;
+    font-weight: 900;
+    font-family: 'Press Start 2P';
+    text-align: center;
+    font-size: 100%;
+    line-height: 25px;
+}
 
-
-
-@media only screen and (max-width:800px) {
+/* @media only screen and (max-width:800px) {
     /* .pixel-art-ghost {
         width: 220px;
     } */
-}
+
+
 
 @media only screen and (max-width:680px) {
-    /* .pixel-art-ghost {
-        width: 170px;
-    } */
-    .timeline-title{
-        text-align: center;
-    }
-    .timeline-division{
-        justify-content: center;
-        gap: 10px;
-    }
+.timeline-division{
+    gap: 10px;
 }
-
-
-/* .button-to-fun{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
-
-.button-to-fun button{
-    width: 50vw;
-    height:300px;
-    border: solid black;
-    border-radius:25%;
-} */
