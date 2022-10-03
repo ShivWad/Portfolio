@@ -2,7 +2,9 @@
 
 body {
     padding: 2%;
-    background-color: #d8d4d4;
+    background: rgb(0, 36, 7);
+    background: linear-gradient(150deg, rgba(0, 36, 7, 1) 0%, rgba(9, 121, 84, 1) 31%, rgba(0, 212, 255, 1) 100%);
+
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -30,13 +32,15 @@ body {
 
 .initial-greeting {
     font-family: 'Press Start 2P';
-}
-
-.initial-greeting {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+}
+
+.timeline-title {
+    text-align: center;
 }
 
 .timeline-cards {
@@ -47,12 +51,10 @@ body {
 .timeline-division {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    gap: 10vw;
+    justify-content: center;
 }
 
-.timeline-title{
-    text-align: center;
-}
 
 .timeline-content-box {
     display: flex;
@@ -86,10 +88,11 @@ body {
     animation-fill-mode: forwards;
 }
 
+
 @keyframes comeToTopeAnimation {
     0% {
         scale: 40%;
-    } 
+    }
 }
 
 
@@ -98,11 +101,11 @@ body {
     transition: box-shadow .5s;
 }
 
-.timeline-content-box:hover .non-overlay{
+.timeline-content-box:hover .non-overlay {
     filter: blur(1.5rem);
 }
 
-.timeline-content-box:hover .overlay{
+.timeline-content-box:hover .overlay {
     display: block;
 }
 
@@ -121,6 +124,30 @@ body {
     line-height: 25px;
 }
 
+
+
+.skills-tab{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7%;
+}
+
+
+.skill-container{
+        width: 254px;
+        border: solid 0px black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+    
+}
+
+.skill-container .skill-image{
+    width: 100%;
+    border: solid 1px rgba(77, 64, 64, 0.664);
+    border-radius: 50%;
+}
 
 
 /* @media only screen and (max-width:800px) {

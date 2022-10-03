@@ -1,4 +1,4 @@
-let greeting = ["Hello", "Welcome"];
+let greeting = ["Hello,", "Welcome"];
 
 let greetingName = "I am Shivam";
 
