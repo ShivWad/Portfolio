@@ -13,7 +13,6 @@ function writeGreeting() {
   }
 }
 
-
 let j = 0;
 function writeIntroduction() {
   if (j < greeting[1].length) {
@@ -23,19 +22,20 @@ function writeIntroduction() {
   }
 }
 
-let k=0;
+let k = 0;
 
 function writeName() {
-    if (k < greetingName.length) {
-      document.getElementById("intro").innerHTML += greetingName.charAt(k);
-      k++;
-      setTimeout(writeName, speed);
-    }
+  if (k < greetingName.length) {
+    document.getElementById("intro").innerHTML += greetingName.charAt(k);
+    k++;
+    setTimeout(writeName, speed);
   }
+}
+
 
 
 writeGreeting();
 
 setTimeout(writeIntroduction, 850);
 
-setTimeout(writeName, 2000)
+setTimeout(writeName, 2000);

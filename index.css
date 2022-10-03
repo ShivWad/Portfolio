@@ -22,7 +22,6 @@ body {
 
 .pixel-art-ghost {
     position: absolute;
-    /* width: 285px; */
 
     width: 30%;
     top: 0;
@@ -135,7 +134,7 @@ body {
 
 
 .skill-container{
-        width: 254px;
+        width: 255px;
         border: solid 0px black;
         border-radius: 50%;
         display: flex;
@@ -149,6 +148,13 @@ body {
     border-radius: 50%;
 }
 
+.link-container {
+    display: flex;
+    justify-content: end;
+}
+.links{
+    width: 50px;
+}
 
 /* @media only screen and (max-width:800px) {
     /* .pixel-art-ghost {
@@ -160,5 +166,18 @@ body {
 @media only screen and (max-width:680px) {
     .timeline-division {
         gap: 10px;
+    }
+
+    .skill-container{
+        width: 120px;
+    }
+    .link-container {
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .links{
+        display: flex;
+        justify-content: center;
+
     }
 }
