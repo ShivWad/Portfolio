@@ -50,6 +50,10 @@ body {
     justify-content: space-evenly;
 }
 
+.timeline-title{
+    text-align: center;
+}
+
 .timeline-content-box {
     display: flex;
     flex-direction: column;
@@ -58,23 +62,57 @@ body {
     border: solid 1px black;
     border-radius: 5%;
     align-items: center;
+    position: relative;
 }
 
-.timeline-title {
+.non-overlay,
+.overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     text-align: center;
 }
+
+.overlay {
+    background-color: #4742425d;
+    border: solid 1px black;
+    z-index: 10;
+    display: none;
+    position: absolute;
+    border-radius: 5%;
+    animation: comeToTopeAnimation cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes comeToTopeAnimation {
+    0% {
+        scale: 40%;
+    } 
+}
+
 
 .timeline-content-box:hover {
     box-shadow: 0px 0px 20px 0px #474242;
     transition: box-shadow .5s;
 }
 
+.timeline-content-box:hover .non-overlay{
+    filter: blur(1.5rem);
+}
+
+.timeline-content-box:hover .overlay{
+    display: block;
+}
+
 .timeline-img {
     border: solid 1px black;
     border-radius: 50%;
-    width: 100px;
+    width: 110px;
 }
-.position-text{
+
+.position-text {
     color: black;
     font-weight: 900;
     font-family: 'Press Start 2P';
@@ -82,6 +120,8 @@ body {
     font-size: 100%;
     line-height: 25px;
 }
+
+
 
 /* @media only screen and (max-width:800px) {
     /* .pixel-art-ghost {
@@ -91,7 +131,7 @@ body {
 
 
 @media only screen and (max-width:680px) {
-.timeline-division{
-    gap: 10px;
-}
+    .timeline-division {
+        gap: 10px;
+    }
 }
