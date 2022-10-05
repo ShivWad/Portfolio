@@ -2,9 +2,9 @@
 
 body {
     padding: 2%;
-    background: rgb(0, 36, 7);
+    
     background: linear-gradient(150deg, rgba(0, 36, 7, 1) 0%, rgba(9, 121, 84, 1) 31%, rgba(0, 212, 255, 1) 100%);
-
+    background: linear-gradient(150deg, rgb(77 225 106) 0%, rgb(48 206 136) 31%, rgb(120 232 255) 100%);
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -125,7 +125,7 @@ body {
 
 
 
-.skills-tab{
+.skills-tab {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -146,41 +146,35 @@ body {
 
 
 
-.skill-container{
+.skill-container {
     display: flex;
     border: solid 0px black;
     justify-content: center;
-    gap:25px
-
+    gap: 25px
 }
 
 
 
 
-.skill-container .skill-image{
+.skill-container .skill-image {
     width: 85px;
     border: solid 1px rgba(77, 64, 64, 0.664);
     border-radius: 50%;
+    background-color: white;
 }
 
 
-.points{
+.points {
     display: flex;
     width: 200px;
     justify-content: space-between;
 }
 
-.points p{
-
+.points p {
+    font-weight: 900;
+    font-family: 'Press Start 2P';
 }
 
-.progression {
-    width: 200px;
-    color: azure;
-    background:currentColor;
-    border: solid 2px black;
-    border-radius: 5%;
-}
 .progression-container {
     width: 200px;
     border: solid oldlace;
@@ -189,19 +183,121 @@ body {
     border-radius: 5%;
 }
 
-.progression.js{
-    width: 125px;
+.progression {
+    width: 200px;
+    border: solid 2px black;
+    border-radius: 5%;
+    height: 5px;
 }
 
-.progression.css{
-    width: 90px;
+.progression.js {
+    animation: progressionjs cubic-bezier(0.1, 0.92, 0.17, 1) 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-color: yellow;
+
 }
+
+.progression.css {
+    animation: progressioncss cubic-bezier(0.1, 0.92, 0.17, 1) 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-color: #264de4;
+
+}
+
+.progression.html {
+    animation: progressionhtml cubic-bezier(0.1, 0.92, 0.17, 1) 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-color: #F06529;
+}
+
+.progression.react {
+    animation: progressionreact cubic-bezier(0.1, 0.92, 0.17, 1) 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-color: #61dbfb;
+}
+
+
+
+.hidden {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(-100%);
+    transition: all 1.2s;
+}
+
+.skill-container.css {
+    transition-delay: 300ms;
+}
+
+.skill-container.html {
+    transition-delay: 600ms;
+}
+
+.skill-container.react {
+    transition-delay: 800ms;
+}
+
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+@keyframes progressionjs {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 130px;
+    }
+}
+
+
+@keyframes progressioncss {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 90px;
+    }
+}
+
+@keyframes progressionhtml {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 110px;
+    }
+}
+
+@keyframes progressionreact {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 130px;
+    }
+}
+
+
 
 .link-container {
     display: flex;
     justify-content: end;
 }
-.links{
+
+.links {
     width: 50px;
 }
 
@@ -209,6 +305,7 @@ body {
     /* .pixel-art-ghost {
         width: 220px;
     } */
+
 
 
 
@@ -222,9 +319,16 @@ body {
         justify-content: center;
         margin-top: 30px;
     }
-    .links{
+
+    .links {
         display: flex;
         justify-content: center;
 
+    }
+}
+
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
     }
 }
