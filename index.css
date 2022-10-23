@@ -2,7 +2,7 @@
 
 body {
     padding: 2%;
-    
+
     background: linear-gradient(150deg, rgba(0, 36, 7, 1) 0%, rgba(9, 121, 84, 1) 31%, rgba(0, 212, 255, 1) 100%);
     background: linear-gradient(150deg, rgb(77 225 106) 0%, rgb(48 206 136) 31%, rgb(120 232 255) 100%);
     animation: fadeInAnimation ease 2s;
@@ -105,7 +105,11 @@ body {
 }
 
 .timeline-content-box:hover .overlay {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
 }
 
 .timeline-img {
